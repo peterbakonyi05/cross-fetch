@@ -11,7 +11,7 @@
     "deploy": "git push --no-verify && git push --tags --no-verify && npm publish",
     "lint": "eslint .",
     "release": "release-it",
-    "test": "run-p -s test:node test:headless lint",
+    "test": "run-s -s test:headless test:node lint",
     "test:browser": "opn test/browser/index.html",
     "test:ci": "npm test -s && npm run -s test:sauce",
     "test:headless": "mocha-headless-chrome -f test/browser/index.html -a no-sandbox -a disable-setuid-sandbox",
